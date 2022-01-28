@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goofu handmade菓馥手作</title>
+    <script src="{{ url_for('static', filename='js/home.js') }}" type="text/javascript"></script>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/page.css') }}"/>
+</head>
+
+<body>
+    <button onclick="toggleMenu()" class="hamber">
+    <img src="{{ url_for('static', filename='images/btn.png') }}" width="20px">
+    </button>
+    <div style="line-height: 30px;position:relative;padding:30px;">
+        <a href="{{ url_for('static', filename='/') }}"><img src="{{ url_for('static', filename='images/1.jpg') }}"/></a>
+    </div>
+   
+ 
+    
+    <div class="container">
+        <div class="head">
+            <ul id="menu">
+                <li id="news" class="tag" onclick="change(1);">最新消息<br/><span style="font-size:10px;">NEWS</li>
+                <li id="goods" class="tag" onclick="change(2);">商品資訊<br/><span style="font-size:10px;">GOODS</li>
+                <li id="online" class="tag" onclick="change(3);">線上訂購<br/><span style="font-size:10px;">ONLINE STORE</li> 
+                <li id="contact" class="tag" onclick="change(4);">聯絡我們<br/><span style="font-size:10px;">CONTACT</li>  
+                <li id="car" class="tag" onclick="change(5);">購物車<br/><span style="font-size:10px;">SHOPPING CAR</li>
+                <li id="login" class="tag" onclick="change(6);">會員專區<br/><span style="font-size:10px;">LOGIN</li>
+                <li id="logout" class="tag" onclick="change(7);">會員登出<br/><span style="font-size:10px;">LOGOUT</li>
+            </ul>
+           
+        </div>
+        <hr/>
+        <br/>
+        <div class="imgbox">
+            <div class="img">
+                <img src="{{ url_for('static', filename='images/2.jpg') }}">
+            </div>
+            <div class="img">
+                <img src="{{ url_for('static', filename='images/3.jpg') }}">
+            </div>
+            <div class="img">
+                <img src="{{ url_for('static', filename='images/4.jpg') }}">
+            </div>
+            <div class="img">
+                <img src="{{ url_for('static', filename='images/5.jpg') }}">
+            </div>
+            <div class="img">
+                <img src="{{ url_for('static', filename='images/6.jpg') }}">
+            </div>
+            <div class="img">
+                <img src="{{ url_for('static', filename='images/7.jpg') }}">
+            </div>
+            <div class="img">
+                <img src="{{ url_for('static', filename='images/8.jpg') }}">
+            </div>
+            <div class="img">
+                <img src="{{ url_for('static', filename='images/9.jpg') }}">
+            </div>
+
+                   </div>
+        </div>
+        <div class="footer">
+            <img src="{{ url_for('static', filename='images/goofu.jpg') }}" alt="goofu圓標" width="180px;"style="margin-top:20px;">
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" 
+            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+            <a href="http://www.facebook.com"><i class="fa fa-facebook fa-2x" ></i></a>
+            <a href="https://www.instagram.com/"><i class="fa fa-instagram fa-2x" ></i></a>  
+        </div>
+    </div>
+    
+    <div id="sell" class="box" style="transition:opacity 0.5s;"> <!--如不是設定透明度，則transition:opacity 0.5s無效-->
+        <div id="sellbox" class="boxtitle">即將前往購物車</div>
+        <div class="boxinside">確定要結帳了嗎?</div>
+        <div style="margin-top:25px;">
+        <button class="btn" onclick="yes()">是的(Yes)</button>
+        <button class="btn" onclick="no()">不了，我在逛逛(No)</button>
+        </div>
+    </div>
+    
+
+    
+   
+</body>
+</html>
