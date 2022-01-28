@@ -1,0 +1,145 @@
+body{
+    width:100%;   /*寬度100%*/
+    height:100%;
+    text-align:center;  /*文字居中*/
+    background-color:rgb(248, 227, 230);  /*背景顏色*/
+}
+.container{
+    width:100%;
+}
+.head{
+    background-color: rgb(151, 55, 130);
+    height:50px;
+    color:white;
+    font-weight:bold;
+    line-height: 50px;
+    font-size:20px;
+   
+}
+.title ul{
+    list-style: none; /*清單樣式*/
+    display:flex;  /*區塊並排*/
+    margin:auto;  /*區塊置中*/
+    
+}
+.title{
+    font-weight:bold; /*文字粗體*/
+    font-size:18px;  /*文字大小*/
+    display:flex;   /*區塊並排*/
+    line-height: 15px;  /*行高15像素*/
+}
+.tag{
+    margin-right:20px;  /*與右邊區塊間隔20像素*/
+    cursor:pointer;  /*滑鼠游標設定*/
+    letter-spacing:2px;   /*字元間距2像素*/
+}
+
+.current-tag{
+    color:rgb(136, 79, 10);
+    margin-right:20px;  /*與右邊區塊間隔20像素*/
+    letter-spacing:2px;  /*字元間距2像素*/
+    cursor:pointer;  /*滑鼠游標設定*/
+}
+.box{
+    width:600px;
+    height:250px;
+    border:1px solid rgb(172, 94, 161);
+    text-align: center;
+    margin:auto;
+    border-radius:10px;   /*格子圓角設定10像素*/
+    margin-top:30px;
+}
+.head{
+    background-color: rgb(172, 92, 154);
+    border-radius:10px;   /*格子圓角設定10像素*/
+    height:50px;
+    color:white;
+    font-weight:bold;
+    line-height: 50px;
+    font-size:20px;
+}
+.innerbox{
+    margin-top: 40px;
+    line-height: 80px;
+    font-size:25px;
+    color:rgb(165, 73, 104);
+}
+.btn{
+    background-color:rgb(172, 94, 161);
+    border-radius:5px;  /*邊框圓角5像素*/
+    font-weight:bold;
+    color:rgb(255, 255, 255);
+    cursor:pointer;  /*滑鼠游標設定*/
+    font-size:18px;
+}
+.boxer{
+    width:300px;  /*格子寬度*/
+    height:150px;  /*格子高度*/
+    background-color:rgb(233, 188, 196);   /*格子背景顏色*/
+    position:fixed;left:50%;top:50%;margin-left:-150px;   /*位置浮起且固定於左上方，將位置設定左邊及上方各50%再將區塊間距設為-150巷素，則格子置中*/
+    border:1px solid rgb(233, 188, 196);  /*1像素橘色的邊框*/
+    border-radius:5px;   /*格子圓角設定5像素*/
+    box-shadow:0px 0px 5px #000000;  /*格子陰影*/
+    color:rgb(38, 33, 107);
+    display:none; /*透明設定 0為預設不顯示；1為預設顯示*/
+}
+.boxtitle{
+    font-weight:bold;
+    background-color:#eeeeee;
+    height:30px;
+    margin:auto;
+    border-radius:2px;
+    line-height:30px;
+}
+.boxinside{
+    font-weight:bold;
+    margin-top:30px;
+    font-size:20px;
+    color:rgb(19, 74, 177);
+}
+.btnn{
+    background-color:cornsilk;
+    border-radius:5px;  /*邊框圓角5像素*/
+    font-weight:bold;
+    color:rgb(19, 74, 177);
+    cursor:pointer;  /*滑鼠游標設定*/
+}
+.hamber{
+    display:none;
+}
+@media screen and (min-width:600px) and (max-width:1201px){
+    .hamber{
+        justify-content: right;
+        display: none;
+    }
+    .title{
+        font-size:15px;  /*文字大小*/   
+        flex-wrap: wrap;
+    }
+    .box{
+        width:400px;
+    }
+   
+   
+}
+@media screen and (max-width:600px) {
+    .hamber{
+        display: block;
+    }
+    .title ul{
+        display: none;
+        position:absolute;
+        top:40px;
+        background-color: rgb(238, 204, 233);
+    }
+    .title ul li{
+        text-align: center;
+        margin-top:30px;
+    }
+    .box{
+        width:400px;
+    }
+   
+    
+    
+}
